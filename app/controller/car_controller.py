@@ -27,8 +27,6 @@ def getCars():
         result_i += 1
 
     data = {"cars": result_cars}
-    
-    
 
     print(data)
 

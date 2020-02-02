@@ -76,11 +76,11 @@ user_choices_test = {
  #---------------------------
 
 def rateCars(cars, user_choices):
-    print("Cars Type", type(cars))
-    print("user_choices Type", type(user_choices))
+    #print("Cars Type", type(cars))
+    #print("user_choices Type", type(user_choices))
     for car_dictionary in cars:
-        print(type(user_choices["price"]))
-        print("CAR TYPE", type(car_dictionary["price"]))
+        #print(type(user_choices["price"]))
+        #print("CAR TYPE", type(car_dictionary["price"]))
         score = 0
         price_diff = int(user_choices["price"]) - int(car_dictionary["price"])
         size_diff  = int(car_dictionary["size"]) - int(user_choices["size"])
@@ -114,7 +114,7 @@ def rateCars(cars, user_choices):
         score += (10 - size_diff) *2
     #   print("added for size_diff: ", (10 - size_diff) *2)
         if user_choices["fuel"] != "electric" and user_choices["fuel"] != "hybrid":
-            print("it's gasoline")
+            #print("it's gasoline")
             score += int(car_dictionary["MPG"]) * int(user_choices["commute"]) * 10
 
         if user_choices["fuel"] == car_dictionary["fuel"]:
@@ -132,9 +132,9 @@ def rateCars(cars, user_choices):
                 pass
         cars_score.append(score)
         car_dictionary["points"] = score
-        print()
-        print()
-        print()
+        #print()
+        #print()
+        #print()
 
     print(cars_score)
     return cars
